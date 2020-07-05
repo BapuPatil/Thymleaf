@@ -35,7 +35,15 @@ h2 {
 </style>
 
 <head>
-
+<script>
+function validateForm() {
+  var x = document.forms["userID"]["UserIDFfield"].value;
+  if (x == "" || x == null) {
+    alert("ID must be filled out");
+    return false;
+  }
+}
+</script>
 
 	<title>Input User Details</title>
 
@@ -44,8 +52,8 @@ h2 {
 <div class="outer">	
 <h2>User Details</h2>
 <div class="inner">
-	<form th:action="@{/user}" th:object="${user}" method="post">
-		<p>UserID:<input type="text" th:field="*{userId}"></p>
+	<form  name = "userID" th:action="@{/user}" th:object="${user}" method="post" onsubmit="return validateForm()">
+		<p>UserID:<input name="UserIDFfield" type="number" th:field="*{userId}" required></p>
 		<p><input type="submit" value="Submit" class="button" /> </p>
 	</form>
 </div>

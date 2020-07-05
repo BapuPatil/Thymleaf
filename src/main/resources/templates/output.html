@@ -32,6 +32,14 @@ color:yellow;
 
 }
 
+div.outer{
+	text-align: center;
+}
+
+div.lnk{
+	color: yellow;
+}
+
 div.inner {
   border: 1px solid lightgreen;
   margin-top: 100px;
@@ -47,13 +55,15 @@ div.inner {
 
 </style>
 <body>
-	<h2>Result</h2>
+	<h2>Result</h2><div class="outer">
 	<div class="inner"><p th:text="'Id: ' + ${record.userId}" />
 	<p th:text="'Name : '+${record.userName}">
 	<p th:text="'Age : '+${record.userAge}">	
 	<p th:text="'Phone : '+${record.userPhone}">
 	<p th:text="'Phone : '+${record.userDob}">
-	</p></div>
 
+	</p></div>
+<a href="/user" class="lnk">HOME</a>
+</div>
 </body>
 </html>
