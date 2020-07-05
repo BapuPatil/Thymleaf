@@ -48,8 +48,11 @@ div.inner {
 </style>
 <body>
 	<h2>Result</h2>
-	<div class="inner"><p th:text="'Id: ' + ${user2.userId}" />
-	<p th:text="'Name : '+${user2.userName}">
+	<div class="inner"><p th:text="'Id: ' + ${record.userId}" />
+	<p th:text="'Name : '+${record.userName}">
+	<p th:text="'Age : '+${record.userAge}">	
+	<p th:text="'Phone : '+${record.userPhone}">
+	<p th:text="'Phone : '+${record.userDob}">
 	</p></div>
 
 </body>
